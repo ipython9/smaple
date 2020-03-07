@@ -1,4 +1,4 @@
-package com.maple.smaple.smaple.controller;
+package com.maple.smaple.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

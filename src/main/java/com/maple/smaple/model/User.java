@@ -1,4 +1,4 @@
-package com.maple.smaple.smaple.model;
+package com.maple.smaple.model;
 
 /**
  * @Author: hanyu

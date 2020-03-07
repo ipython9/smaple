@@ -1,4 +1,4 @@
-package com.maple.smaple.smaple;
+package com.maple.smaple;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
