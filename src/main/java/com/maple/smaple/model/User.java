@@ -9,7 +9,6 @@ package com.maple.smaple.model;
 public class User {
     private String userId;
     private String userName;
-
     public String getUserId() {
         return userId;
     }

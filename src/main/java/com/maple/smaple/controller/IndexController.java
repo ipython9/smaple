@@ -1,7 +1,11 @@
 package com.maple.smaple.controller;
 
+import com.maple.smaple.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @Author: hanyu
@@ -12,8 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("index")
 public class IndexController {
-    @RequestMapping("login")
+    @Autowired
+    private IUserService iUserService;
+
+    @RequestMapping("hello")
+    @ResponseBody
     public String Index(){
-        return  null;
+        return  iUserService.findUserById(1).getUsername();
     }
 }
