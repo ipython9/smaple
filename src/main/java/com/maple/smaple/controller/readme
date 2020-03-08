@@ -1,0 +1,8 @@
+//下面是学习不同知识 的具体controller实现的功能
+IndexController:
+    整合mybatis  实现了直接利用mybtis查询数据库的信息
+    pom文件需要添加mybtis mysql的依赖
+    yml配置文件需要配置mappp.xml文件扫描 bo的别名
+    SmapleApplication需要配置MapperScan("")扫描mapper接口
+GreetingController
+    restful小例子
