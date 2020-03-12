@@ -1,9 +1,21 @@
 package com.maple.smaple.dao.mapper.bo;
 
+import java.util.List;
+
 public class User {
     private Integer userid;
 
     private String username;
+
+    private List<String> userNames;
+
+    public List<String> getUserNames() {
+        return userNames;
+    }
+
+    public void setUserNames(List<String> userNames) {
+        this.userNames = userNames;
+    }
 
     public Integer getUserid() {
         return userid;

@@ -2,6 +2,8 @@ package com.maple.smaple.service;
 
 import com.maple.smaple.dao.mapper.bo.User;
 
+import java.util.List;
+
 /**
  * @Author: hanyu
  * @Description:
@@ -10,4 +12,7 @@ import com.maple.smaple.dao.mapper.bo.User;
  */
 public interface IUserService {
     User findUserById(Integer userId);
+
+    List<User> selectList (User user);
+
 }
