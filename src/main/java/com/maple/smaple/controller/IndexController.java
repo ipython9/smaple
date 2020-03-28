@@ -4,9 +4,11 @@ import com.maple.smaple.dao.mapper.bo.User;
 import com.maple.smaple.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,5 +42,17 @@ public class IndexController {
         user.setUserNames(userNames);
         return iUserService.selectList(user);
 
+    }
+    @RequestMapping("/list")
+    public String list(Model model){
+        User user = new User();
+        List<String> userNames = new ArrayList<>();
+        userNames.add("2");
+        userNames.add("3");
+        userNames.add("4");
+        user.setUserNames(userNames);
+        List<User> users = iUserService.selectList(user);
+        model.addAttribute("userList",users);
+        return  "index";
     }
 }

@@ -11,4 +11,9 @@ spring:
     password: mysql
     url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.jdbc.Driver
-
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+#    关闭thymeleaf缓存
+#    thymeleaf
+#      cache:false
