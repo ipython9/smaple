@@ -6,3 +6,6 @@ IndexController:
     SmapleApplication需要配置MapperScan("")扫描mapper接口
 GreetingController
     restful小例子
+MainTest
+    spring boot启动的方式。更好的理解@EnableAutoConfiguration
+
