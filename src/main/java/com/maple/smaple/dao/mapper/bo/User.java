@@ -1,8 +1,9 @@
 package com.maple.smaple.dao.mapper.bo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class User {
+public class User implements Serializable {
     private Integer userid;
 
     private String username;
