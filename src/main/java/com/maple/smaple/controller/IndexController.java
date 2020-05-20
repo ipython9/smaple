@@ -27,7 +27,7 @@ public class IndexController {
 
     @RequestMapping("hello")
     @ResponseBody
-    public String Index(){
+    public String index(){
         return  iUserService.findUserById(1).getUsername();
     }
 

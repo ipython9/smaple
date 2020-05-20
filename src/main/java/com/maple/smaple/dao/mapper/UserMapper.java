@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface UserMapper {
+
     int countByExample(UserExample example);
 
     int deleteByExample(UserExample example);

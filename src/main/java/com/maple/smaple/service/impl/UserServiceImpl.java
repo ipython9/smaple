@@ -4,7 +4,6 @@ import com.maple.smaple.dao.mapper.UserMapper;
 import com.maple.smaple.dao.mapper.UserSMapper;
 import com.maple.smaple.dao.mapper.bo.User;
 import com.maple.smaple.service.IUserService;
-import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
@@ -12,19 +11,22 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 /**
- * @Author: hanyu
- * @Description:
- * @copyright @hanyu
- * @Date: Create in  2020/3/7 23:42
+ * Description: 
+ * param: 
+ * return: 
+ * author: hanyu
+ * date: 2020/5/20 19:12
  */
 @Service
 public class UserServiceImpl implements IUserService {
+
     @Autowired
     private UserMapper userMapper;
+
     @Autowired
-    private UserSMapper userSMapper;
+    private UserSMapper userSmapper;
+
     @Autowired
     private RedisTemplate<Object,Object> redisTemplate;
 
@@ -32,13 +34,19 @@ public class UserServiceImpl implements IUserService {
     public User findUserById(Integer userId) {
         return  userMapper.selectByPrimaryKey(userId);
     }
-
+    /**
+     * Description: selectList
+     * param: [user]
+     * return: java.util.List<com.maple.smaple.dao.mapper.bo.User>
+     * author: hanyu
+     * date: 2020/5/9 18:53
+     */
     @Override
     public List<User> selectList(User user) {
         RedisSerializer redisSerializer = new StringRedisSerializer();
         redisTemplate.setKeySerializer(redisSerializer);
-        List<User> users = userSMapper.selectList(user);
+        List<User> users = userSmapper.selectList(user);
         redisTemplate.opsForValue().set("user",users);
-        return userSMapper.selectList(user);
+        return userSmapper.selectList(user);
     }
 }
