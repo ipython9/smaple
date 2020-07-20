@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
  * @Date: Create in  2020/4/3 23:34
  */
 
-@Component
-@Aspect
+//@Component
+//@Aspect
 public class LoggerUtil {
     @Before("execution(* com.maple.smaple.controller.GreetingController.*(..))")
     public void before(){
