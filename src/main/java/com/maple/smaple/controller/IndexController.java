@@ -22,7 +22,7 @@ import java.util.List;
  */
 @Controller
 @CrossOrigin
-@RequestMapping("love")
+@RequestMapping("/I/LOVE")
 public class IndexController {
     @Autowired
     private IUserService iUserService;
@@ -45,7 +45,7 @@ public class IndexController {
         return iUserService.selectList(user);
 
     }
-    @RequestMapping("/you")
+    @RequestMapping("/YOU")
     public String list(Model model){
 //        User user = new User();
 //        List<String> userNames = new ArrayList<>();
