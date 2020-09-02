@@ -11,7 +11,6 @@ public class SmapleApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SmapleApplication.class, args);
-        String [] s = new String[4];
     }
 
 }
