@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://www.albee.me/index3.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Our Love Story</title>
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('/Digital-7Mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="/style.css" type="text/css" rel="stylesheet">
+	<link href="/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="/jquery.js"></script>
+	<style type="text/css" abt="234"></style>
+	<script type="text/javascript" src="/garden.js"></script>
+  <script type="text/javascript" src="/functions.js"></script>
+</head>
+<body>
+
+		<div class="controls">
+			<label class="controls__label"></label>
+			<input class="controls__slider" data-slider style = "display: none;">
+
+		</div>
+
+	<div id="mainDiv">
+		<div id="content" style="width: 1110px; height: 625px; margin-top: 27.5px; margin-left: 83px;">
+			<div id="code" style="margin-top: 112.5px;">
+				<span class="comments">我的兄弟</span><br>
+				<span class="space comments">我记得你的女枪在召唤师峡谷的驰骋，不知你是否记得我的卡牌</span><br>
+				<span class="space comments">你是赵部长。<br>
+				<span class="space comments">好多女孩为你着迷。<br>
+				<span class="space comments">依稀还记得 你的董小姐，<br>
+				<span class="space comments">太多的话想说，<br>
+				<span class="space comments">来一句生日快乐，<br>
+				<span class="space comments">一年未见<br>
+				<span class="space comments">你还好吗。<br>
+				<span class="space comments">兄弟啊 想你啊，<br>
+				<span class="space comments">你在那疙瘩还好吗，<br>
+				 <br>
+				<br>
+			</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>_</div>
+			<div id="loveHeart">
+				<canvas id="garden" width="670" height="625"></canvas>
+				<div id="words" style="position: absolute; top: 222.5px; left: 593px;">
+					<div id="messages" style="display: block;">
+						孟凯,生日快乐!
+						<div id="elapseClock"><span class="digit">181</span> days <span class="digit">16</span> hours <span class="digit">53</span> minutes <span class="digit">23</span> seconds</div>
+					</div>
+					<div id="loveu" style="display: block;">
+						Forever Brotherhood.<br>
+						<div class="signature"> - hanyu</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2015, 9, 10);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+	<audio controls autoplay style="width: 0px;height: 0px;">
+		<source src="/love.mp3" type="audio/mpeg">
+	</audio>
+		<script type="text/javascript" src="/other.js"></script>
+
+</body>
+</html>

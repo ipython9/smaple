@@ -15,12 +15,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @CrossOrigin
-@RequestMapping("freemarker")
+@RequestMapping("/my")
 public class IndexFreeMakerController {
-    private final static Logger log = LoggerFactory.getLogger(IndexFreeMakerController.class);
+    static final  Logger logger = LoggerFactory.getLogger(IndexFreeMakerController.class);
     @RequestMapping("/index")
     public String index(Model model){
         model.addAttribute("name","1231");
         return "indexfreemarker";
+    }
+
+    @RequestMapping("/brother")
+    public String list(Model model){
+//        User user = new User();
+//        List<String> userNames = new ArrayList<>();
+//        userNames.add("2");
+//        userNames.add("3");
+//        userNames.add("4");
+//        user.setUserNames(userNames);
+//        List<User> users = iUserService.selectList(user);
+//        model.addAttribute("userList",users);
+        return  "brother";
     }
 }
