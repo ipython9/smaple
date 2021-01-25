@@ -26,35 +26,8 @@ import java.util.List;
 public class IndexController {
     @Autowired
     private IUserService iUserService;
-
-    @RequestMapping("hello")
-    @ResponseBody
-    public String index(){
-        return  iUserService.findUserById(1).getUsername();
-    }
-
-    @RequestMapping("selectList")
-    @ResponseBody
-    public List<User> selectList(){
-        User user = new User();
-        List<String> userNames = new ArrayList<>();
-        userNames.add("2");
-        userNames.add("3");
-        userNames.add("4");
-        user.setUserNames(userNames);
-        return iUserService.selectList(user);
-
-    }
     @RequestMapping("/YOU")
     public String list(Model model){
-//        User user = new User();
-//        List<String> userNames = new ArrayList<>();
-//        userNames.add("2");
-//        userNames.add("3");
-//        userNames.add("4");
-//        user.setUserNames(userNames);
-//        List<User> users = iUserService.selectList(user);
-//        model.addAttribute("userList",users);
         return  "index";
     }
 }

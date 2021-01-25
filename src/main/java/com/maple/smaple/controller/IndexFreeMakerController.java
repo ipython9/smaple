@@ -26,14 +26,6 @@ public class IndexFreeMakerController {
 
     @RequestMapping("/brother")
     public String list(Model model){
-//        User user = new User();
-//        List<String> userNames = new ArrayList<>();
-//        userNames.add("2");
-//        userNames.add("3");
-//        userNames.add("4");
-//        user.setUserNames(userNames);
-//        List<User> users = iUserService.selectList(user);
-//        model.addAttribute("userList",users);
         return  "brother";
     }
 }
