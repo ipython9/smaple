@@ -18,6 +18,16 @@ spring:
     host: 47.101.218.112
     port: 6379
     password: 123456
+  data:
+    elasticsearch:
+      client:
+        reactive:
+          endpoints: 127.0.0.1:9200
+      repositories:
+        enabled: true
 #    关闭thymeleaf缓存
 #    thymeleaf
 #      cache:false
+
+
+#es
