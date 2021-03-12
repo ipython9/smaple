@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 /**
- * Description: 
- * param: 
- * return: 
+ * Description:
+ * param:
+ * return:
  * author: hanyu
  * date: 2020/5/20 19:12
  */
@@ -34,12 +34,11 @@ public class UserServiceImpl implements IUserService {
     public User findUserById(Integer userId) {
         return  userMapper.selectByPrimaryKey(userId);
     }
+
     /**
-     * Description: selectList
-     * param: [user]
-     * return: java.util.List<com.maple.smaple.dao.mapper.bo.User>
-     * author: hanyu
-     * date: 2020/5/9 18:53
+     *
+     * @param user
+     * @return List<User>
      */
     @Override
     public List<User> selectList(User user) {
